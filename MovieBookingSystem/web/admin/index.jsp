@@ -13,5 +13,6 @@
     </head>
     <body>
         <h1>Admin Home page</h1>
+        Enter your name: <input type="text" name="name">
     </body>
 </html>

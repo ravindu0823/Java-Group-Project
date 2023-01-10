@@ -1,6 +1,6 @@
 <%-- 
     Document   : index
-    Created on : Jan 2, 2023, 12:21:25 PM
+    Created on : Jan 2, 2023, 1:57:46 PM
     Author     : dhanu
 --%>
 
@@ -12,6 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>User Home Page</h1>
     </body>
 </html>

@@ -1,6 +1,6 @@
 <%-- 
     Document   : index
-    Created on : Jan 2, 2023, 12:21:42 PM
+    Created on : Jan 2, 2023, 1:58:10 PM
     Author     : dhanu
 --%>
 
@@ -12,6 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>This is admin panel home page</h1>
+        <h1>Admin Home page</h1>
+        Enter your name: <input type="text" name="name">
     </body>
 </html>

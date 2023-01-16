@@ -11,7 +11,8 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Home</title>
+    <title>ABC Cinemas - Contact Us</title>
+    <link rel="icon" type="image/png" href="img/logo-white.png"/>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -101,7 +102,7 @@
         <li><a href="AboutUs.jsp">About us</a></li>
     </ul>
     <p>
-        ©2022 ABC Cinemas All Right Reserved. Developed by Java Group 29
+        ©2022 ABC Cinemas All Right Reserved. Developed by Java Group 15
     </p>
     <img src="img/logo-white.png" alt="logo" id="homeLog-downleft"/>
     <ul class="social_icon">

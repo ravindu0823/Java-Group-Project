@@ -10,6 +10,8 @@ public class Booking {
     private int dateId;
     private int seatCount;
 
+    private String transactionId;
+
     public Booking(String seatArray, String customerName, String email, int totalPrice, int phone, int movieId, int dateId, int seatCount) {
         this.seatArray = seatArray;
         this.customerName = customerName;
@@ -19,6 +21,26 @@ public class Booking {
         this.movieId = movieId;
         this.dateId = dateId;
         this.seatCount = seatCount;
+    }
+
+    public Booking(String seatArray, String customerName, String email, int totalPrice, int phone, int movieId, int dateId, int seatCount, String transactionId) {
+        this.seatArray = seatArray;
+        this.customerName = customerName;
+        this.email = email;
+        this.totalPrice = totalPrice;
+        this.phone = phone;
+        this.movieId = movieId;
+        this.dateId = dateId;
+        this.seatCount = seatCount;
+        this.transactionId = transactionId;
+    }
+
+    public String getTransactionId() {
+        return transactionId;
+    }
+
+    public void setTransactionId(String transactionId) {
+        this.transactionId = transactionId;
     }
 
     public String getSeatArray() {

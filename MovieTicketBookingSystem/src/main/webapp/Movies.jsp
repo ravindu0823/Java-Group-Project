@@ -15,7 +15,8 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Movies</title>
+    <title>ABC Cinemas - Movies</title>
+    <link rel="icon" type="image/png" href="img/logo-white.png"/>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -54,6 +55,7 @@
 <section class="banner" id="banner">
     <div class="content">
         <h2 banner-heading>AVATAR: THE WAY OF WATER</h2>
+        <h3 class="text-white">Now Screening</h3>
     </div>
 </section>
 <% DBConnection dBConnection = new DBConnection();
@@ -103,7 +105,7 @@
                 </div>
                 <div class="fs-4">
                     <i class="fa-brands fa-youtube"><span style="margin-left: 20px">
-                  <a href="<%=resultSet.getString(3)%>" style="text-decoration: none; color: white">
+                  <a href="<%=resultSet.getString(3)%>" target="_blank" style="text-decoration: none; color: white">
                     Watch Trailer
                   </a>
                 </span>
@@ -156,7 +158,7 @@
                 <div class="fs-4">
                     <i class="fa-brands fa-youtube"
                     ><span style="margin-left: 20px">
-                  <a href="" style="text-decoration: none; color: white">
+                  <a href="https://www.youtube.com/watch?v=a53e4HHnx_s&t=96s" target="_blank" style="text-decoration: none; color: white">
                     Watch Trailer
                   </a>
                 </span>
@@ -169,7 +171,7 @@
                 <img src="img/nowShowing-dance.jpg" alt="" class="img-nowShowing"/>
             </div>
             <div class="text">
-                <h3>I WANNA DANCE WITH SOMEBODY</h3>
+                <h3>I Wanna Dance With Somebody</h3>
                 <p class="text-white fs-4">Now Showing</p>
 
                 <div class="fs-4">
@@ -177,7 +179,7 @@
                     ><span
                             style="margin-left: 20px; font-family: 'Poppins' !important"
                     >
-                  <a href="" style="text-decoration: none; color: white">
+                  <a href="Booking.jsp" style="text-decoration: none; color: white">
                     Buy Tickets
                   </a>
                 </span>
@@ -186,7 +188,7 @@
                 <div class="fs-4">
                     <i class="fa-brands fa-youtube"
                     ><span style="margin-left: 20px">
-                  <a href="" style="text-decoration: none; color: white">
+                  <a href="https://www.youtube.com/watch?v=9tfemzaMkoU" target="_blank" style="text-decoration: none; color: white">
                     Watch Trailer
                   </a>
                 </span>
@@ -197,13 +199,13 @@
         <div class="box">
             <div class="imgBx">
                 <img
-                        src="img/nowShowing-avatar.jpg"
+                        src="img/strange_world.jpg"
                         alt=""
                         class="img-nowShowing"
                 />
             </div>
             <div class="text">
-                <h3>AVATAR: THE WAY OF WATER</h3>
+                <h3>Strange World</h3>
                 <p class="text-white fs-4">Now Showing</p>
 
                 <div class="fs-4">
@@ -211,7 +213,7 @@
                     ><span
                             style="margin-left: 20px; font-family: 'Poppins' !important"
                     >
-                  <a href="" style="text-decoration: none; color: white">
+                  <a href="Booking.jsp" style="text-decoration: none; color: white">
                     Buy Tickets
                   </a>
                 </span>
@@ -220,7 +222,7 @@
                 <div class="fs-4">
                     <i class="fa-brands fa-youtube"
                     ><span style="margin-left: 20px">
-                  <a href="" style="text-decoration: none; color: white">
+                  <a href="https://www.youtube.com/watch?v=bKh2G73gCCs" target="_blank" style="text-decoration: none; color: white">
                     Watch Trailer
                   </a>
                 </span>
@@ -231,13 +233,13 @@
         <div class="box">
             <div class="imgBx">
                 <img
-                        src="img/nowShowing-avatar.jpg"
+                        src="img/megan.jpg"
                         alt=""
                         class="img-nowShowing"
                 />
             </div>
             <div class="text">
-                <h3>AVATAR: THE WAY OF WATER</h3>
+                <h3>M3GAN</h3>
                 <p class="text-white fs-4">Now Showing</p>
 
                 <div class="fs-4">
@@ -245,7 +247,7 @@
                     ><span
                             style="margin-left: 20px; font-family: 'Poppins' !important"
                     >
-                  <a href="" style="text-decoration: none; color: white">
+                  <a href="Booking.jsp" style="text-decoration: none; color: white">
                     Buy Tickets
                   </a>
                 </span>
@@ -254,7 +256,7 @@
                 <div class="fs-4">
                     <i class="fa-brands fa-youtube"
                     ><span style="margin-left: 20px">
-                  <a href="" style="text-decoration: none; color: white">
+                  <a href="https://www.youtube.com/watch?v=BRb4U99OU80" target="_blank" style="text-decoration: none; color: white">
                     Watch Trailer
                   </a>
                 </span>
@@ -292,7 +294,7 @@
                 <div class="fs-4">
                     <i class="fa-brands fa-youtube" style="color: black;"
                     ><span style="margin-left: 20px">
-                  <a href="<%=resultSet.getString(3)%>" style="text-decoration: none; color: black">
+                  <a href="<%=resultSet.getString(3)%>" target="_blank" style="text-decoration: none; color: black">
                     Watch Trailer
                   </a>
                 </span>
@@ -306,70 +308,6 @@
                 break;
             }
         } %>
-        <%--<div class="box">
-            <div class="imgBx">
-                <img src="img/nowShowing-plane.jpg" alt="" class="img-comingsoon"/>
-            </div>
-            <div class="text">
-                <h3>PLANE</h3>
-                <p class="fs-5">IN CINEMAS 27TH JANUARY</p>
-
-                <div class="fs-4">
-                    <i class="fa-brands fa-youtube" style="color: black;"
-                    ><span style="margin-left: 20px">
-                  <a href="" style="text-decoration: none; color: black">
-                    Watch Trailer
-                  </a>
-                </span>
-                    </i>
-                </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="imgBx">
-                <img src="img/nowShowing-knock.jpg" alt="" class="img-comingsoon"/>
-            </div>
-            <div class="text">
-                <h3>KNOCK AT THE CABIN</h3>
-                <p class="fs-5">IN CINEMAS 3RD FEBRUARY</p>
-
-                <div class="fs-4">
-                    <i class="fa-brands fa-youtube" style="color: black;"
-                    ><span style="margin-left: 20px">
-                  <a href="" style="text-decoration: none; color: black">
-                    Watch Trailer
-                  </a>
-                </span>
-                    </i>
-                </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="imgBx">
-                <img
-                        src="img/nowShowing-babylon.jpg"
-                        alt=""
-                        class="img-comingsoon"
-                />
-            </div>
-            <div class="text">
-                <h3>BABYLON</h3>
-                <p class="fs-5">IN CINEMAS 3RD FEBRUARY</p>
-
-                <div class="fs-4">
-                    <i class="fa-brands fa-youtube" style="color: black;"
-                    ><span style="margin-left: 20px">
-                  <a href="" style="text-decoration: none; color: black">
-                    Watch Trailer
-                  </a>
-                </span>
-                    </i>
-                </div>
-            </div>
-        </div>--%>
-
     </div>
 </section>
 
@@ -393,13 +331,13 @@
                 />
             </div>
             <div class="text">
-                <h3 class="fs-5">ANT-MAN AND THE WASP: QUANTUMANIA</h3>
+                <h3 class="fs-5">ANT-MAN and The Wasp: Quantumania</h3>
                 <p class="fs-5">IN CINEMAS 17TH FEBRUARY</p>
 
                 <div class="fs-4">
                     <i class="fa-brands fa-youtube" style="color: black;"
                     ><span style="margin-left: 20px">
-                  <a href="" style="text-decoration: none; color: black">
+                  <a href="https://www.youtube.com/watch?v=ZlNFpri-Y40&t=15s" target="_blank" style="text-decoration: none; color: black">
                     Watch Trailer
                   </a>
                 </span>
@@ -416,13 +354,13 @@
                 />
             </div>
             <div class="text">
-                <h3 class="fs-5">DUNGEONS & DRAGONS: HONOR AMONG THIEVES</h3>
+                <h3 class="fs-5">Dungeons & Dragons: Honor Among Thieves</h3>
                 <p class="fs-5">IN CINEMAS 3RD MARCH</p>
 
                 <div class="fs-4">
                     <i class="fa-brands fa-youtube" style="color: black;"
                     ><span style="margin-left: 20px">
-                  <a href="" style="text-decoration: none; color: black">
+                  <a href="https://www.youtube.com/watch?v=IiMinixSXII" target="_blank" style="text-decoration: none; color: black">
                     Watch Trailer
                   </a>
                 </span>
@@ -439,13 +377,13 @@
                 />
             </div>
             <div class="text">
-                <h3 class="fs-5">SHAZAM! FURY OF THE GODS</h3>
-                <p class="fs-5">IN CINEMAS 17TH MARCH</p>
+                <h3 class="fs-5">Shazam! Fury Of The Gods</h3>
+                <p class="fs-5">In Cinemas 17th March</p>
 
                 <div class="fs-4">
                     <i class="fa-brands fa-youtube" style="color: black;"
                     ><span style="margin-left: 20px">
-                  <a href="" style="text-decoration: none; color: black">
+                  <a href="https://www.youtube.com/watch?v=Zi88i4CpHe4" target="_blank" style="text-decoration: none; color: black">
                     Watch Trailer
                   </a>
                 </span>
@@ -458,13 +396,13 @@
                 <img src="img/nowShowing-john.jpg" alt="" class="img-comingsoon"/>
             </div>
             <div class="text">
-                <h3>JOHN WICK: CHAPTER 4</h3>
-                <p class="fs-5">IN CINEMAS 24TH MARCH</p>
+                <h3>John Wick: Chapter 4</h3>
+                <p class="fs-5">In Cinemas 24th March</p>
 
                 <div class="fs-4">
                     <i class="fa-brands fa-youtube" style="color: black;"
                     ><span style="margin-left: 20px">
-                  <a href="" style="text-decoration: none; color: black">
+                  <a href="https://www.youtube.com/watch?v=qEVUtrk8_B4" target="_blank" style="text-decoration: none; color: black">
                     Watch Trailer
                   </a>
                 </span>
@@ -484,7 +422,7 @@
         <li><a href="AboutUs.jsp">About us</a></li>
     </ul>
     <p>
-        ©2022 ABC Cinemas All Right Reserved. Developed by Java Group 29
+        ©2022 ABC Cinemas All Right Reserved. Developed by Java Group 15
     </p>
     <img src="img/logo-white.png" alt="logo" id="homeLog-downleft"/>
     <ul class="social_icon">

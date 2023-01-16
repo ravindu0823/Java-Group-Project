@@ -1,4 +1,8 @@
-<%--
+<%@ page import="com.pusl2024.movieticketbookingsystem.DBConnection" %>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.PreparedStatement" %>
+<%@ page import="java.sql.Statement" %>
+<%@ page import="java.sql.ResultSet" %><%--
   Created by IntelliJ IDEA.
   User: dhanu
   Date: 1/13/2023
@@ -17,7 +21,8 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Admin panel</title>
+    <title>ABC Cinemas - Admin panel</title>
+    <link rel="icon" type="image/png" href="../img/logo-white.png"/>
 
 
     <link href="assets/css/mystle.css" rel="stylesheet">
@@ -55,7 +60,7 @@
     <div class="sidebar">
         <ul>
             <li>
-                <a href="#">
+                <a href="Adminpan.jsp">
                     <i class="fas fa-clinic-"></i>
                     <div class="title">ABC CINEMA</div>
                 </a>
@@ -78,24 +83,48 @@
                     <div class="title">Users</div>
                 </a>
             </li>
+            <li>
+                <a href="feedback.jsp">
+                    <i class="fas fa"></i>
+                    <div class="title">Feedbacks</div>
+                </a>
+            </li>
 
 
             <li>
                 <a href="../AdminLogOutServlet">
                     <i class="fas fa"></i>
-                    <div class="title">Log Out</div>
+                    <div class="title text-danger">Log Out</div>
                 </a>
 
         </ul>
     </div>
+
+    <% DBConnection dBConnection = new DBConnection();
+        Connection connection = dBConnection.getConnection();
+        PreparedStatement preparedStatement;
+
+    %>
     <div class="main">
 
         <div class="cards">
             <div class="card">
                 <div class="card-content">
+                    <% try {
+                        Statement statement = connection.createStatement();
+                        ResultSet resultSet = statement.executeQuery("select COUNT(*) from movie where description = 'Now Screening'");
 
-                    <div class="number">67</div>
-                    <div class="card-name">Movies</div>
+                        resultSet.next();
+                    %>
+                    <div class="number"><%=resultSet.getInt(1)%>
+                    </div>
+                    <%
+                        } catch (Exception e) {
+                            out.print(e.getMessage());
+                        }
+
+                    %>
+                    <div class="card-name">Now Screening Movies</div>
                 </div>
                 <div class="icon-box">
                     <i class="fas fa-p"></i>
@@ -103,7 +132,20 @@
             </div>
             <div class="card">
                 <div class="card-content">
-                    <div class="number">105</div>
+                    <% try {
+                        Statement statement = connection.createStatement();
+                        ResultSet resultSet = statement.executeQuery("SELECT COUNT(*) FROM movie.customer where status = 1");
+
+                        resultSet.next();
+                    %>
+                    <div class="number"><%=resultSet.getInt(1)%>
+                    </div>
+                    <%
+                        } catch (Exception e) {
+                            out.print(e.getMessage());
+                        }
+
+                    %>
                     <div class="card-name">Users</div>
                 </div>
                 <div class="icon-box">
@@ -112,7 +154,20 @@
             </div>
             <div class="card">
                 <div class="card-content">
-                    <div class="number">8</div>
+                    <% try {
+                        Statement statement = connection.createStatement();
+                        ResultSet resultSet = statement.executeQuery("select COUNT(*) from movie where description != 'Now Screening'");
+
+                        resultSet.next();
+                    %>
+                    <div class="number"><%=resultSet.getInt(1)%>
+                    </div>
+                    <%
+                        } catch (Exception e) {
+                            out.print(e.getMessage());
+                        }
+
+                    %>
                     <div class="card-name">Upcoming movies</div>
                 </div>
                 <div class="icon-box">
@@ -121,7 +176,20 @@
             </div>
             <div class="card">
                 <div class="card-content">
-                    <div class="number">$450</div>
+                    <% try {
+                        Statement statement = connection.createStatement();
+                        ResultSet resultSet = statement.executeQuery("select SUM(totalfee) from payment");
+
+                        resultSet.next();
+                    %>
+                    <div class="number">$<%=resultSet.getInt(1)%>
+                    </div>
+                    <%
+                        } catch (Exception e) {
+                            out.print(e.getMessage());
+                        }
+
+                    %>
                     <div class="card-name">Earnings</div>
                 </div>
                 <div class="icon-box">
@@ -133,13 +201,13 @@
         <div class="doctor-visiting">
             <div class="heading">
                 <h2>Trending movies</h2>
-                <a href="#" class="btn">View All</a>
+                <a href="movies.jsp" class="btn">View All</a>
             </div>
             <table class="visiting">
                 <thead>
                 <td>Photo</td>
                 <td>Movie Name</td>
-                <td>Tickets</td>
+                <td>Ticket Count</td>
 
                 </thead>
                 <tbody>
@@ -149,19 +217,45 @@
                             <img src="assets/img/avater.jpg" alt="">
                         </div>
                     </td>
-                    <td>AVATAR: THE WAY OF WATER</td>
-                    <td>3000</td>
+                    <td>Avatar: The Way Of Water</td>
+                    <% try {
+                        Statement statement = connection.createStatement();
+                        ResultSet resultSet = statement.executeQuery("select SUM(quantity) from booking where movieid = 1");
+
+                        resultSet.next();
+                    %>
+                    <td><%=resultSet.getInt(1)%>
+                    </td>
+                    <%
+                        } catch (Exception e) {
+                            out.print(e.getMessage());
+                        }
+
+                    %>
 
 
                 </tr>
                 <tr>
                     <td>
                         <div class="img-box-small">
-                            <img src="assets/img/adaraneeya prarthana.jpg">
+                            <img src="assets/img/nowShowing-blackadam.jpg">
                         </div>
                     </td>
-                    <td>Adaraneeya Prarthana</td>
-                    <td>2800</td>
+                    <td>Black Adam</td>
+                    <% try {
+                        Statement statement = connection.createStatement();
+                        ResultSet resultSet = statement.executeQuery("select SUM(quantity) from booking where movieid = 4");
+
+                        resultSet.next();
+                    %>
+                    <td><%=resultSet.getInt(1)%>
+                    </td>
+                    <%
+                        } catch (Exception e) {
+                            out.print(e.getMessage());
+                        }
+
+                    %>
 
                 </tr>
                 <tr>
@@ -170,8 +264,22 @@
                             <img src="assets/img/puss.jpg">
                         </div>
                     </td>
-                    <td>PUSS IN BOOTS: THE LAST WISH</td>
-                    <td>2200</td>
+                    <td>Puss In Boots: The Last Wish</td>
+
+                    <% try {
+                        Statement statement = connection.createStatement();
+                        ResultSet resultSet = statement.executeQuery("select SUM(quantity) from booking where movieid = 2");
+
+                        resultSet.next();
+                    %>
+                    <td><%=resultSet.getInt(1)%>
+                    </td>
+                    <%
+                        } catch (Exception e) {
+                            out.print(e.getMessage());
+                        }
+
+                    %>
 
                 </tr>
                 <tr>
@@ -180,8 +288,22 @@
                             <img src="assets/img/wakanda-forever-atl.jpg">
                         </div>
                     </td>
-                    <td>BLACK PANTHER: WAKANDA FOREVER</td>
-                    <td>1800</td>
+                    <td>Black Panther: Wakanda Forever</td>
+
+                    <% try {
+                        Statement statement = connection.createStatement();
+                        ResultSet resultSet = statement.executeQuery("select SUM(quantity) from booking where movieid = 3");
+
+                        resultSet.next();
+                    %>
+                    <td><%=resultSet.getInt(1)%>
+                    </td>
+                    <%
+                        } catch (Exception e) {
+                            out.print(e.getMessage());
+                        }
+
+                    %>
 
                 </tr>
                 </tbody>

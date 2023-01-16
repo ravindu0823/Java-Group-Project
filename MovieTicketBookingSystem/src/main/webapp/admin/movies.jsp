@@ -15,7 +15,8 @@
 <html>
 <head>
 
-    <title>Movie</title>
+    <title>ABC Cinemas - Movie</title>
+    <link rel="icon" type="image/png" href="../img/logo-white.png"/>
     <!-- Include CSS File Here -->
 
     <link href="assets/css/mystle.css" rel="stylesheet">
@@ -58,7 +59,7 @@
     <div class="sidebar">
         <ul>
             <li>
-                <a href="#">
+                <a href="Adminpan.jsp">
                     <i class="fas fa-clinic-medical"></i>
                     <div class="title">ABC CINEMA</div>
                 </a>
@@ -81,12 +82,18 @@
                     <div class="title">Users</div>
                 </a>
             </li>
+            <li>
+                <a href="feedback.jsp">
+                    <i class="fas fa"></i>
+                    <div class="title">Feedbacks</div>
+                </a>
+            </li>
 
 
             <li>
                 <a href="../AdminLogOutServlet">
                     <i class="fas fa"></i>
-                    <div class="title">Log Out</div>
+                    <div class="title text-danger">Log Out</div>
                 </a>
             </li>
 

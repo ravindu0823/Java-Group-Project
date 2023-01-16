@@ -8,7 +8,8 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Home</title>
+    <title>ABC Cinemas - Home Page</title>
+    <link rel="icon" type="image/png" href="img/logo-white.png"/>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -26,7 +27,7 @@
     ></script>
     <script
             src="https://kit.fontawesome.com/1f15b717d8.js"
-            crossorigin="anonymous"
+            crossorigin="anonymous" defer
     ></script>
 </head>
 
@@ -53,13 +54,14 @@
 <section class="banner" id="banner">
     <div class="content">
         <h2 banner-heading>AVATAR: THE WAY OF WATER</h2>
+        <h3 class="text-white">Now Screening</h3>
     </div>
 </section>
 
 <section class="nowshowing" id="nowshowing-home">
     <div class="text-center">
         <span class="fs-3">Now Showing</span>
-        <a href="" style="text-decoration: none; color: white"
+        <a href="Movies.jsp" style="text-decoration: none; color: white"
         ><span style="padding-left: 48%">See More>></span></a>
     </div>
 
@@ -84,7 +86,7 @@
 
                 <div class="fs-4">
                     <i class="fa-solid fa-ticket"><span style="margin-left: 20px; font-family: 'Poppins' !important">
-                  <a href="" style="text-decoration: none; color: white">
+                  <a href="Booking.jsp" style="text-decoration: none; color: white">
                     Buy Tickets
                   </a>
                 </span>
@@ -112,7 +114,8 @@
 <section class="" id="comingsoon-home">
     <div class="text-center" style="margin-top: 100px">
         <span class="fs-3">Coming Soon</span>
-        <a href="" style="text-decoration: none; color: white"><span style="padding-left: 48%">See More>></span></a>
+        <a href="Movies.jsp" style="text-decoration: none; color: white"><span
+                style="padding-left: 48%">See More>></span></a>
     </div>
     <hr/>
     <div class="content" style="padding-bottom: 200px">
@@ -127,8 +130,10 @@
                 <img src="img/<%=resultSet.getString(4)%>" alt="" class="img-comingsoon"/>
             </div>
             <div class="text">
-                <h3><%=resultSet.getString(1)%></h3>
-                <p class="text-white fs-5"><%=resultSet.getString(2)%></p>
+                <h3><%=resultSet.getString(1)%>
+                </h3>
+                <p class="text-white fs-5"><%=resultSet.getString(2)%>
+                </p>
                 <div class="fs-4">
                     <i class="fa-brands fa-youtube"><span style="margin-left: 20px">
                   <a href="<%=resultSet.getString(3)%>" target="_blank" style="text-decoration: none; color: white">
@@ -153,14 +158,9 @@
     <div class="content">
         <h3 id="home-about-title">ABOUT ABC CINEMAS</h3>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            condimentum, justo quis facilisis luctus, est justo molestie magna, et
-            rutrum erat ligula in metus. Pellentesque vulputate, mi sit amet
-            iaculis pellentesque, magna metus blandit libero, sit amet sodales
-            nibh magna sed sapien. Curabitur ac tellus ac tellus aliquet
-            convallis. Ut nec semper neque. Nullam ultricies nibh nec nibh feugiat
-            rhoncus. Aliquam volutpat ut est sed rutrum. Aliquam suscipit
-            vulputate consequat. Nam molestie justo id lobortis placerat.
+            ABC Cinema is a company that operates luxury mini cinemas in Sri Lanka and imports and distributes Hollywood
+            and Bollywood movies. They use modern technology to provide a cinematic experience at an affordable price.
+            They were the first to introduce digital mini cinemas in Sri Lanka.
         </p>
     </div>
 </section>
@@ -174,7 +174,7 @@
         <li><a href="AboutUs.jsp">About us</a></li>
     </ul>
     <p>
-        ©2022 ABC Cinemas All Right Reserved. Developed by Java Group 29
+        ©2022 ABC Cinemas All Right Reserved. Developed by Java Group 15
     </p>
     <img src="img/logo-white.png" alt="logo" id="homeLog-downleft"/>
     <ul class="social_icon">

@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Review Page</title>
-
+    <link rel="icon" type="image/png" href="img/logo-white.png"/>
     <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -37,19 +37,19 @@
             </tr>
             <tr>
                 <td class="text-light">SubTotal:</td>
-                <td class="text-light">${transaction.amount.details.subtotal}</td>
+                <td class="text-light">$${transaction.amount.details.subtotal}</td>
             </tr>
             <tr>
-                <td class="text-light">Shipping:</td>
-                <td class="text-light">${transaction.amount.details.shipping}</td>
+                <td class="text-light">Service Charges:</td>
+                <td class="text-light">$${transaction.amount.details.shipping}</td>
             </tr>
             <tr>
                 <td class="text-light">Tax:</td>
-                <td class="text-light">${transaction.amount.details.tax}</td>
+                <td class="text-light">$${transaction.amount.details.tax}</td>
             </tr>
             <tr>
                 <td class="text-light">Total:</td>
-                <td class="text-light">${transaction.amount.total}</td>
+                <td class="text-light">$${transaction.amount.total}</td>
             </tr>
             <tr>
                 <td colspan="2" class="text-center fw-bold fs-4 text-light">Payer Information Details:</td>
@@ -68,7 +68,7 @@
                 <td class="text-light">${payer.email}</td>
             </tr>
             <tr>
-                <td colspan="2" class="text-center fw-bold fs-4 text-light">Shipping Address:</td>
+                <td colspan="2" class="text-center fw-bold fs-4 text-light">Address:</td>
                 <td></td>
             </tr>
             <tr>

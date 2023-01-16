@@ -12,7 +12,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News</title>
+    <title>ABC Cinemas - News</title>
+    <link rel="icon" type="image/png" href="img/logo-white.png"/>
     <link rel="stylesheet" href="css/news.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -144,7 +145,7 @@
         <li><a href="ContactUs.jsp">Contact Us</a></li>
         <li><a href="AboutUs.jsp">About us</a></li>
     </ul>
-    <p>©2022 ABC Cinemas All Right Reserved. Developed by Java Group 29</p>
+    <p>©2022 ABC Cinemas All Right Reserved. Developed by Java Group 15</p>
     <img src="img/logo-white.png" alt="logo" id="homeLog-downleft">
     <ul class="social_icon">
         <li><a href="#facebook">

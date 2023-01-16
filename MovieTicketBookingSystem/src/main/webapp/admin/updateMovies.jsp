@@ -15,7 +15,8 @@
 <html>
 <head>
 
-    <title>Movie</title>
+    <title>ABC Cinemas - Update Movie</title>
+    <link rel="icon" type="image/png" href="../img/logo-white.png"/>
     <!-- Include CSS File Here -->
 
     <link href="assets/css/mystle.css" rel="stylesheet">
@@ -62,7 +63,7 @@
     <div class="sidebar">
         <ul>
             <li>
-                <a href="#">
+                <a href="Adminpan.jsp">
                     <i class="fas fa-clinic-medical"></i>
                     <div class="title">ABC CINEMA</div>
                 </a>
@@ -85,12 +86,18 @@
                     <div class="title">Users</div>
                 </a>
             </li>
+            <li>
+                <a href="feedback.jsp">
+                    <i class="fas fa"></i>
+                    <div class="title">Feedbacks</div>
+                </a>
+            </li>
 
 
             <li>
                 <a href="../AdminLogOutServlet">
                     <i class="fas fa"></i>
-                    <div class="title">Log Out</div>
+                    <div class="title text-danger">Log Out</div>
                 </a>
             </li>
 
@@ -105,22 +112,34 @@
                         <b>Movie Id</b>
                         <input type="text" name="movie_id1" class="form-control" value="<%=movieId%>" required>
                     </div>
+                    <% try {
+                        Statement statement = connection.createStatement();
+                        ResultSet resultSet = statement.executeQuery("SELECT * FROM movie.movie where movieid = " + movieId + "");
+
+                        resultSet.next();
+                    %>
                     <div class="form-wrapper">
                         <b>Movie Name</b>
-                        <input type="text" name="name1" class="form-control" required>
+                        <input type="text" name="name1" class="form-control" value="<%=resultSet.getString(2)%>" required>
                     </div>
                     <div class="form-wrapper">
                         <b>Description</b>
-                        <input type="text" name="description1" class="form-control" required>
+                        <input type="text" name="description1" class="form-control" value="<%=resultSet.getString(9)%>" required>
                     </div>
                     <div class="form-wrapper">
                         <b>Trailer</b>
-                        <input type="text" name="trailer1" class="form-control" required>
+                        <input type="text" name="trailer1" class="form-control" value="<%=resultSet.getString(10)%>" required>
                     </div>
                     <div class="form-wrapper">
                         <b>Image</b>
                         <input type="file" name="image1" class="form-control" required>
                     </div>
+                    <%
+                    } catch (Exception e) {
+                        out.print(e.getMessage());
+                    }
+
+                    %>
 
                     <div class="form-wrapper">
                         <b> <label class="control-label col-sm-2">Time Slots:</label></b>

@@ -10,8 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PaymentServices {
-    public static final String CLIENT_ID = "AVQ_uzbiau1ZG1cwr-ejjz6G5v5fa2CS9eqWk4wtw-BZGU0TVH3BTDds41DHeC4UX_EIHIdfR6OFKShC";
-    public static final String CLIENT_SECRET = "EEFYFV0uoQX1Ja8E1pRN4bvS70I_CrzmqZ3KYWzGv8lbewrQ1W8zllqwkUFYLu0WU3NP9YjxGFI0ZpYY";
+    // public static final String CLIENT_ID = "AVQ_uzbiau1ZG1cwr-ejjz6G5v5fa2CS9eqWk4wtw-BZGU0TVH3BTDds41DHeC4UX_EIHIdfR6OFKShC";
+    public static final String CLIENT_ID = "AfhWeehel_PF_Kqt_awyg2TcuWG-NtAwgq0vKOHrMPdGwOnSLjV0e3Gcc3fMMHhFnt-ehHDfI1OU8twx";
+    // public static final String CLIENT_SECRET = "EEFYFV0uoQX1Ja8E1pRN4bvS70I_CrzmqZ3KYWzGv8lbewrQ1W8zllqwkUFYLu0WU3NP9YjxGFI0ZpYY";
+    public static final String CLIENT_SECRET = "EMmucQosu1Z-cFSfhClD0pOQ1TpuygkSrpjFMX97kWWeuwKQoW1sJ4E5PUc-tlfdJYWUwa5rPYoLwXeR";
     public static final String MODE = "sandbox";
 
     public String authorizePayment(Order orderDetail) throws PayPalRESTException {

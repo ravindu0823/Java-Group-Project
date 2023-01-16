@@ -28,7 +28,7 @@ public class BookingInsert {
         int dateId = booking.getDateId();
         int seatCount = booking.getSeatCount();
 
-        String transactionId = UUID.randomUUID().toString();
+        String transactionId = booking.getTransactionId();
 
         String[] seats = seatArray.split(",");
         int[] seatsInt = new int[seats.length];
@@ -76,6 +76,7 @@ public class BookingInsert {
                 rs = stmt.executeQuery();
             }
 
+            // booking.setTransactionId(transactionId);
             return 0;
 
         } catch (SQLException ex) {

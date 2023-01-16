@@ -12,7 +12,8 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>About Us</title>
+    <title>ABC Cinemas - About Us</title>
+    <link rel="icon" type="image/png" href="img/logo-white.png"/>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -50,14 +51,9 @@
         <h3 id="aboutus-title">ABOUT US</h3>
         <h3 id="home-about-title">ABOUT ABC CINEMAS</h3>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            condimentum, justo quis facilisis luctus, est justo molestie magna, et
-            rutrum erat ligula in metus. Pellentesque vulputate, mi sit amet
-            iaculis pellentesque, magna metus blandit libero, sit amet sodales
-            nibh magna sed sapien. Curabitur ac tellus ac tellus aliquet
-            convallis. Ut nec semper neque. Nullam ultricies nibh nec nibh feugiat
-            rhoncus. Aliquam volutpat ut est sed rutrum. Aliquam suscipit
-            vulputate consequat. Nam molestie justo id lobortis placerat.
+            ABC Cinema is a company that operates luxury mini cinemas in Sri Lanka and imports and distributes Hollywood
+            and Bollywood movies. They use modern technology to provide a cinematic experience at an affordable price.
+            They were the first to introduce digital mini cinemas in Sri Lanka.
         </p>
     </div>
 </section>
@@ -67,19 +63,23 @@
         <div class="about-column" id="about-column01">
             <h3 id="aboutus-vision">Vision</h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                condimentum, justo quis facilisis luctus, est justo molestie magna,
-                et rutrum erat ligula in metus. Pellentesque vulputate, mi sit amet
-                iaculis pellentesque.
+                The vision for ABC cinema is to provide a unique and immersive entertainment experience for audiences.
+                This can include the use of advanced technology, such as 3D and 4K projection, as well as comfortable
+                seating and high-quality sound systems. Additionally, our cinema is also focusing on providing a wide
+                range of food and drink options, as well as creating a social and enjoyable atmosphere for movie-goers.
+                Overall, the aim is to create an experience that cannot be replicated at home and make the movie-going
+                experience special and enjoyable.
             </p>
         </div>
         <div class="about-column" id="about-column02">
             <h3 id="aboutus-mission">Mission</h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                condimentum, justo quis facilisis luctus, est justo molestie magna,
-                et rutrum erat ligula in metus. Pellentesque vulputate, mi sit amet
-                iaculis pellentesque.
+                The mission of ABC Cinema is to entertain and engage audiences by providing them with the latest and
+                greatest in film content and technology. This includes showcasing a diverse range of movies, from
+                blockbuster Hollywood productions to independent and foreign films. Cinemas also strive to create a
+                welcoming and inclusive environment for all moviegoers, regardless of their background or interests.
+                Overall, the mission of ABC Cinema is to be a cultural hub and a source of entertainment for the
+                community.
             </p>
         </div>
     </div>
@@ -94,7 +94,7 @@
         <li><a href="AboutUs.jsp">About us</a></li>
     </ul>
     <p>
-        ©2022 ABC Cinemas All Right Reserved. Developed by Java Group 29
+        ©2022 ABC Cinemas All Right Reserved. Developed by Java Group 15
     </p>
     <img src="img/logo-white.png" alt="logo" id="homeLog-downleft"/>
     <ul class="social_icon">

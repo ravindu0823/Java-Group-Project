@@ -17,6 +17,7 @@
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Admin Login</title>
+    <link rel="icon" type="image/png" href="../img/logo-white.png"/>
 </head>
 <body>
 <%
@@ -38,13 +39,26 @@
 %>
 <div class="logo"></div>
 <div class="login-block">
-    <h1>ADMIN</h1>
-    <form action="../AdminLoginServlet" method="post" name="admin_login">
-        <input type="text" value="" placeholder="Username" name="username" required>
-        <input type="password" value="" placeholder="Password" name="password" required>
+    <h1>ADMIN LOGIN</h1>
+    <form action="../AdminLoginServlet" method="post" name="admin_login" onsubmit="adminLoginValidate()">
+        <input type="text" value="" placeholder="Username" name="username" id="us_name" required>
+        <input type="password" value="" placeholder="Password" name="password" id="pass" required>
 
         <button type="submit">Login</button>
     </form>
 </div>
+
+<script>
+    function adminLoginValidate() {
+        if (document.getElementById("us_name").value === "") {
+            window.alert("Please enter your username");
+        }
+
+        if (document.getElementById("pass").valueOf === "") {
+            window.alert("Please enter your password");
+        }
+    }
+</script>
+
 </body>
 </html>

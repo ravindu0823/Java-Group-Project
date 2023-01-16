@@ -16,10 +16,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="img/logo-white.png"/>
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.108.0">
-    <title>Checkout</title>
+    <title>ABC Cinemas - Checkout</title>
 
     <link
             rel="stylesheet"
@@ -244,6 +245,9 @@
                         <div class="col-12">
                             <label for="phone" class="form-label">Phone</label>
                             <input type="text" name="phone" class="form-control" id="phone">
+                            <div class="invalid-feedback">
+                                Please enter a valid email address for shipping updates.
+                            </div>
                         </div>
 
                         <button class="my-4 w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>

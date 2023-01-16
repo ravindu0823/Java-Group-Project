@@ -14,7 +14,7 @@
 <html>
 <head>
 
-    <title>ABC Cinemas - Update User</title>
+    <title>ABC Cinemas - User Feedbacks</title>
     <link rel="icon" type="image/png" href="../img/logo-white.png"/>
     <!-- Include CSS File Here -->
     <link href="assets/css/mystle.css" rel="stylesheet">
@@ -46,16 +46,11 @@
 
 %>
 
-
-<%
-    int userId = Integer.parseInt(request.getParameter("user_id"));
-
-    DBConnection dBConnection = new DBConnection();
+<% DBConnection dBConnection = new DBConnection();
     Connection connection = dBConnection.getConnection();
     PreparedStatement preparedStatement;
 
 %>
-
 <div class="container_1">
     <div class="sidebar">
         <ul>
@@ -101,54 +96,44 @@
 
         </ul>
     </div>
+
     <div class="main">
         <div class="wrapper">
 
             <div class="inner">
-                <form action="../UserUpdateServlet" name="update_user" method="POST">
-                    <h3>User Details</h3>
+                <h2 class="text-center mb-4">User Feedbacks</h2>
+                <% try {
+                    Statement statement = connection.createStatement();
+                    ResultSet resultSet = statement.executeQuery("SELECT * FROM movie.feedback where status = 1");
 
-                    <div class="form-wrapper">
-                        <b><label for="">User ID</label></b>
-                        <input type="text" name="user_id" class="form-control" value="<%=userId%>" required readonly>
-                    </div>
+                    while (resultSet.next()) {
+                %>
+                <div class="mx-5">
+                    <form action="../FeedbackDeleteServlet" method="post" style="width: 100% !important;">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Feedback Number</label>
+                            <input type="text" name="feedback_id" class="form-control" id="exampleFormControlInput1"
+                                   value="<%=resultSet.getInt(1)%>" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Feedback</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"
+                                      style="height: 100px" readonly><%=resultSet.getString(2)%></textarea>
+                        </div>
+                        <input type="submit" class="btn btn-danger" value="Delete Feedback">
+                        <hr>
+                    </form>
+                </div>
+                <% }
+                } catch (Exception e) {
+                    out.print(e.getMessage());
+                }
 
-                    <% try {
-                        Statement statement = connection.createStatement();
-                        ResultSet resultSet = statement.executeQuery("SELECT * FROM movie.customer where cusid = " + userId + "");
-
-                        resultSet.next();
-                    %>
-                    <div class="form-wrapper">
-                        <b> <label for="">Name</label></b>
-                        <input type="text" name="user_name" class="form-control" value="<%=resultSet.getString(2)%>"
-                               required>
-                    </div>
-                    <div class="form-wrapper">
-                        <b> <label for="">Email</label></b>
-                        <input type="text" name="user_email" class="form-control" value="<%=resultSet.getString(4)%>"
-                               required>
-                    </div>
-                    <div class="form-wrapper">
-                        <b> <label for="">Phone Number</label></b>
-                        <input type="text" name="phone_number" class="form-control" value="<%=resultSet.getInt(3)%>"
-                               required>
-                    </div>
-                    <%
-                        } catch (Exception e) {
-                            out.print(e.getMessage());
-                        }
-
-                    %>
-                    <div>
-                        <br>
-                        <br>
-                    </div>
-                    <button class="btn btn-primary" type="submit">Update User</button>
-                </form>
+                %>
 
             </div>
         </div>
+
     </div>
 </div>
 </body>

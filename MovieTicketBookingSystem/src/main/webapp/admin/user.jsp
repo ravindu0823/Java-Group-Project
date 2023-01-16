@@ -13,7 +13,8 @@
 <html>
 <head>
 
-    <title>User</title>
+    <title>ABC Cinemas - User</title>
+    <link rel="icon" type="image/png" href="../img/logo-white.png"/>
     <!-- Include CSS File Here -->
     <link href="assets/css/mystle.css" rel="stylesheet">
     <link
@@ -23,6 +24,11 @@
     <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
             defer
+    ></script>
+
+    <script
+            src="https://kit.fontawesome.com/1f15b717d8.js"
+            crossorigin="anonymous" defer
     ></script>
 </head>
 <body class="bgcol">
@@ -53,7 +59,7 @@
     <div class="sidebar">
         <ul>
             <li>
-                <a href="#">
+                <a href="Adminpan.jsp">
                     <i class="fas fa-clinic-medical"></i>
                     <div class="title">ABC CINEMA</div>
                 </a>
@@ -76,12 +82,18 @@
                     <div class="title">Users</div>
                 </a>
             </li>
+            <li>
+                <a href="feedback.jsp">
+                    <i class="fas fa"></i>
+                    <div class="title">Feedbacks</div>
+                </a>
+            </li>
 
 
             <li>
                 <a href="../AdminLogOutServlet">
                     <i class="fas fa"></i>
-                    <div class="title">Log Out</div>
+                    <div class="title text-danger">Log Out</div>
                 </a>
             </li>
 

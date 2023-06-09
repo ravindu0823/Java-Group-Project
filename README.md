@@ -1,4 +1,4 @@
-# Java-Group-Project
+# Movie Booking System
 
 ![GitHub contributors](https://img.shields.io/github/contributors/ravindu0823/Java-Group-Project?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/ravindu0823/Java-Group-Project?style=for-the-badge)
